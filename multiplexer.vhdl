@@ -1,3 +1,4 @@
+--Editor: Miguel Lock
 entity mux is
   -- `a`, `b` and `s` are inputs of the multiplexer element.
   -- `C` is the output, 
@@ -8,7 +9,7 @@ architecture rtl of mux is
 begin
   --  This multiplexer architecture contains one concurrent assignment.
     
-  C <= (a and not(s)) or (b and s);
+  C <= (a and not(s)) or (not(b) and s);
   
 end rtl;
 
